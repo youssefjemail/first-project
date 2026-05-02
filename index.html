@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Neon Gravity Dash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="indexcss.css" />
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="800" height="450"></canvas>
+    <div id="score-display">SCORE: 0</div>
+    <div id="overlay">
+      <h1 id="overlay-title">NEON GRAVITY DASH</h1>
+      <p id="overlay-msg">Flip gravity to dodge the spikes.<br>Collect gold orbs for bonus points.</p>
+      <p id="hi-score-display"></p>
+      <div id="overlay-score" class="final-score"></div>
+      <button id="action-btn" class="neon-btn">START GAME</button>
+      <p class="subtitle">SPACE / CLICK / TAP to flip gravity</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

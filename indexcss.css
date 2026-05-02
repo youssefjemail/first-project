@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #0a0010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  overflow: hidden;
+}
+
+#game-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game-canvas {
+  display: block;
+  border: 2px solid #ff2d9b;
+  box-shadow: 0 0 20px #ff2d9b, 0 0 40px #ff2d9b44, inset 0 0 20px #00000088;
+}
+
+#score-display {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: #00f0ff;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff88;
+  letter-spacing: 2px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  background: rgba(10, 0, 16, 0.82);
+  z-index: 20;
+  backdrop-filter: blur(2px);
+}
+
+#overlay.hidden { display: none; }
+
+#overlay h1 {
+  font-size: 42px;
+  font-weight: 900;
+  color: #ff2d9b;
+  text-shadow: 0 0 10px #ff2d9b, 0 0 30px #ff2d9b, 0 0 60px #ff2d9b88;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+}
+
+#overlay p {
+  color: #c0a0d0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+#overlay .final-score {
+  color: #00f0ff;
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff88;
+  letter-spacing: 3px;
+}
+
+.neon-btn {
+  padding: 14px 40px;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: transparent;
+  color: #ff2d9b;
+  border: 2px solid #ff2d9b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px #ff2d9b88;
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #ff2d9b;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+  z-index: -1;
+}
+
+.neon-btn:hover { color: #0a0010; box-shadow: 0 0 20px #ff2d9b; }
+.neon-btn:hover::before { transform: scaleX(1); }
+.neon-btn:active { transform: scale(0.97); }
+
+.subtitle {
+  font-size: 13px;
+  color: #9060a8;
+  letter-spacing: 1.5px;
+}
